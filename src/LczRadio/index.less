@@ -1,0 +1,36 @@
+.lcz-radio-group {
+
+  .ant-radio-group {
+    font-size: initial;
+  }
+
+  .ant-radio {
+    color: inherit;
+    font-size: inherit;
+    border-color: inherit;
+    top: 0;
+  }
+
+  .ant-radio-wrapper {
+    height: inherit;
+    line-height: normal;
+    display: inline-flex;
+    align-items: center;
+
+    &.ant-radio-wrapper-checked .ant-radio-checked {
+      &::after {
+        display: none;
+      }
+    }
+
+    .ant-radio-input:focus+.ant-radio-inner {
+      box-shadow: none;
+    }
+
+    span {
+      &:last-of-type {
+        white-space: nowrap;
+      }
+    }
+  }
+}

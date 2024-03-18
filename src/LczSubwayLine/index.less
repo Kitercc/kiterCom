@@ -1,0 +1,65 @@
+.lcz-subway-line-wrapper {
+  position: relative;
+
+  .subway-is-roll {
+    .overlays {
+      display: none;
+    }
+  }
+
+  .subway-content {
+    fill: #fff;
+    stroke: none;
+  }
+
+  .amap-subway-api #select_bg {
+
+    transform: translate(-30%, -30%);
+    fill-opacity: 1;
+  }
+
+  .lcz-subway-zoom {
+    position: absolute;
+    color: #fff;
+    z-index: 20;
+
+    .zoom-wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .zoom-increase,
+      .zoom-decrease {
+        outline: none;
+        border: none;
+        cursor: pointer;
+        padding: 0;
+      }
+
+
+
+      .ant-slider-track {
+        background-color: transparent;
+      }
+
+      .ant-slider-handle {
+        border: none;
+        border-radius: 0;
+      }
+    }
+  }
+
+  #subwaySvg {
+    width: 100%;
+    height: 100%;
+
+    .subway-marker-site {
+      transform: scale(var(--mzoom-scale));
+      overflow: initial;
+    }
+
+    .station_obj {
+      cursor: pointer;
+    }
+  }
+}

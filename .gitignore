@@ -1,0 +1,16 @@
+*.log*
+.cache
+.DS_Store
+.idea
+.vscode
+.history
+.editorconfig
+# build
+dist
+es
+types
+# npm
+node_modules
+yarn.lock
+package-lock.json
+.gitkeep

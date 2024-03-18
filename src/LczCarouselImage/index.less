@@ -1,0 +1,61 @@
+.lcz-carouse-image-wrapper {
+  width: 100%;
+  height: 100%;
+  position: relative;
+
+
+  .swiper-container {
+    &.disable {
+      * {
+        pointer-events: none !important;
+      }
+    }
+  }
+
+
+  .ant-spin-nested-loading {
+    width: 100%;
+    height: 100%;
+  }
+
+
+  .carousel-img {
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    display: inline-block;
+  }
+
+  .lcz-scroll-page-prev {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 9;
+    cursor: pointer;
+  }
+
+  .lcz-scroll-page-next {
+    position: absolute;
+    right: 0;
+    top: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 9;
+    cursor: pointer;
+  }
+
+  .swiper-button-disabled {
+    opacity: 0.3;
+  }
+
+  .swiper-container {
+    .swiper-wrapper {
+      .swiper-slide {
+        background: rgba(0, 0, 0, 0);
+      }
+    }
+  }
+
+}

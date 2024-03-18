@@ -1,0 +1,131 @@
+.lcz-drop-down-wrapper {
+
+  .lcz-drop-down-button {
+    border: 1px solid #3d99fc;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    user-select: none;
+    padding: 6px 0;
+    transition-property: border, background;
+    transition-duration: 0.3s;
+
+    .text {
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+
+    span {
+      line-height: 1.3;
+      display: inline-block;
+    }
+
+    .select-icon {
+      line-height: 1;
+    }
+  }
+
+  .ant-dropdown-menu {
+    scrollbar-width: none;
+    padding: 0;
+
+    .ant-dropdown-menu-item {
+      line-height: inherit;
+
+      .ant-dropdown-menu-title-content {
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+      }
+    }
+  }
+
+  .ant-dropdown,
+  .ant-dropdown-menu-item,
+  .ant-dropdown-menu-submenu-title {
+    font-size: inherit;
+    font-weight: inherit;
+    font-family: inherit;
+    letter-spacing: inherit;
+  }
+
+  .ant-dropdown-menu-item-group {
+
+    .ant-dropdown-menu-item-group-title {
+      line-height: inherit;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+
+    .ant-dropdown-menu-item-group-list {
+      .ant-dropdown-menu-item {
+        line-height: inherit;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+
+        .ant-dropdown-menu-title-content {
+          overflow: hidden;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+        }
+      }
+    }
+  }
+
+
+
+  .ant-dropdown-menu-submenu {
+    width: 100%;
+
+
+    .ant-dropdown-menu-submenu-title {
+      line-height: inherit;
+      display: flex;
+      align-items: center;
+      width: 100%;
+      justify-content: space-between;
+
+      &:hover {
+        background-color: initial;
+      }
+    }
+
+    .ant-dropdown-menu-title-content {
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+
+    .ant-dropdown-menu-submenu-expand-icon {
+      display: inline-flex;
+      position: initial;
+      align-self: center;
+      color: inherit;
+
+      .ant-dropdown-menu-submenu-arrow-icon {
+        color: inherit;
+        font-size: inherit;
+      }
+
+
+    }
+  }
+}
+
+.lcz-drop-submenu-popup {
+  .ant-dropdown-menu-item {
+    font-size: inherit;
+    font-weight: inherit;
+    font-family: inherit;
+    letter-spacing: inherit;
+    line-height: inherit;
+
+    &:last-of-type {
+      margin-bottom: 0px !important;
+    }
+  }
+}

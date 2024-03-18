@@ -1,0 +1,50 @@
+.weather-wrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    .weather-icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+
+        span {
+            height: 40px;
+            width: 40px;
+            position: absolute;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+    }
+
+    .info-container {
+        height: 100%;
+        display: flex;
+        flex: 1 1 0%;
+        justify-content: space-between;
+
+        .title-info {
+            white-space: nowrap;
+            word-wrap: normal;
+            word-break: keep-all;
+        }
+
+        .temp-info {
+            white-space: nowrap;
+            word-wrap: normal;
+            word-break: keep-all;
+        }
+
+        .wind-info {
+            white-space: nowrap;
+            word-wrap: normal;
+            word-break: keep-all;
+        }
+    }
+}

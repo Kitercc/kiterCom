@@ -1,0 +1,41 @@
+.tabs-wrapper {
+  justify-content: space-between;
+  transition: all .3s;
+  // overflow-x: auto;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  .wrapper-box {
+    display: flex;
+    transform: translate(0, 0);
+    transition: transform .3s;
+  }
+
+  .tabs-items {
+    line-height: 0;
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    transition: all .1s;
+    user-select: none;
+    white-space: nowrap;
+    overflow: hidden;
+
+    &.tabs-action {
+      position: relative;
+
+      &::after {
+        content: '';
+        position: absolute;
+        display: inline-block;
+        width: 100%;
+        left: 0;
+        right: 0;
+        bottom: 0;
+      }
+    }
+  }
+}

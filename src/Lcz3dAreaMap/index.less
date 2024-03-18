@@ -1,0 +1,82 @@
+.lcz-3d-area-map-wrapper {
+  position: relative;
+
+  ul {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+  }
+
+  .animate {
+    transition: all 0.3s ease-in;
+  }
+
+  &.design {
+
+    .lcz-3d-area-map-tooltip-image {
+      pointer-events: none !important;
+      cursor: default !important;
+    }
+
+    .lcz-com-3d-area-map-scatter-sign {
+      pointer-events: none !important;
+    }
+
+    div[class^="lcz-area-map-lightbar-"] {
+      pointer-events: none !important;
+    }
+  }
+
+  div[class^="lcz-area-map-lightbar-"] {
+    pointer-events: auto;
+  }
+
+  .lcz-3d-area-map {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1;
+  }
+
+  .lcz-upper-drill-wrapper {
+    position: absolute;
+    z-index: 2;
+    cursor: pointer;
+    background-size: 100% 100% !important;
+    background-repeat: no-repeat !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .lcz-3d-amap-load-mask {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 999;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
+  }
+
+  .lcz-3d-areaMap-ripples-wrapper {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+  }
+
+  .disable {
+    display: none;
+  }
+
+  div.pointer-event-none {
+    pointer-events: none !important;
+  }
+}

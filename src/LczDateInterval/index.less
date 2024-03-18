@@ -1,0 +1,75 @@
+@hoverBoder: 1px solid rgba(61, 153, 252, 1);
+@backgroundColor: rgba(21, 24, 28, 1);
+@boder: 1px solid rgba(49, 51, 55, 1);
+@hoverColor: rgba(61, 153, 252, 1);
+@color: #C8D0D8;
+
+
+
+.DateInterval {
+    position: relative;
+    height: 100%;
+    width: 100%;
+
+    .dateinterval-panel-container {
+        display: flex;
+
+        .range-quick-selector {
+
+            .range-quick-selector-box {
+                overflow-y: auto;
+                height: 100%;
+                width: 100%;
+
+                &::-webkit-scrollbar {
+                    display: none;
+                }
+
+                .quick-item {
+                    cursor: pointer;
+
+                }
+            }
+
+        }
+
+    }
+
+    .ant-picker {
+        width: 100%;
+        height: 100%;
+        outline: none;
+
+        //输入框
+        .ant-picker-input {
+            display: flex;
+            flex-direction: row-reverse;
+
+            >input {
+                text-align: center;
+            }
+        }
+
+        //中间的连接符
+        .ant-picker-range-separator {
+            font-size: 14px;
+        }
+
+        //输入框底部的小长条
+        .ant-picker-active-bar {
+            display: none;
+        }
+
+    }
+
+    .ant-picker-disabled {
+        opacity: .5;
+    }
+
+
+    .ant-picker-focused {
+        box-shadow: none;
+    }
+
+
+}

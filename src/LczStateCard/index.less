@@ -1,0 +1,77 @@
+.lcz-state-card-wrapper {
+  width: 100%;
+  height: 100%;
+  position: relative;
+
+  .lcz-state-card-container {
+    width: 100%;
+    height: 100%;
+    -ms-overflow-style: none; //IE 10+
+    scrollbar-width: none; //火狐隐藏滚动条
+    position: relative;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    &::-webkit-scrollbar-corner {
+      display: none;
+    }
+  }
+
+  .lcz-state-card-ul-box {
+    display: flex;
+    position: absolute;
+  }
+
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .lcz-state-card-item {
+    width: max-content;
+    height: max-content;
+    display: flex;
+
+    li {
+      white-space: nowrap;
+      transition: all .2s;
+      display: flex;
+      align-items: center;
+
+      .icon-box {
+        flex-shrink: 0;
+
+        .bg-image {
+          background-size: 100% 100%;
+          background-position: center center;
+          background-repeat: no-repeat;
+        }
+      }
+
+      .lcz-state-card-text {
+        display: flex;
+        align-items: center;
+        white-space: nowrap;
+      }
+
+      .lcz-state-card-num-con {
+        display: flex;
+        align-items: center;
+        white-space: nowrap;
+      }
+    }
+  }
+
+  .pager-wrapper {
+    position: absolute;
+    display: flex;
+    z-index: 9;
+
+    li {
+      cursor: pointer;
+    }
+  }
+}

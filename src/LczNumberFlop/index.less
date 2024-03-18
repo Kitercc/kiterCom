@@ -1,0 +1,139 @@
+ .lcz-com-con {
+   .scrolldown {
+     width: 100%;
+     height: 100%;
+     display: flex;
+
+     .gradient {
+       line-height: 1;
+       background-size: 100% 100% !important;
+       -webkit-background-clip: text !important;
+       background-clip: text !important;
+       color: transparent;
+       -webkit-text-fill-color: transparent !important;
+       text-fill-color: transparent !important;
+       text-decoration: none;
+
+       &::selection {
+         -webkit-text-fill-color: #fff;
+         text-fill-color: #fff;
+       }
+     }
+   }
+
+   .title {
+     display: flex;
+     transition: all 0.3s;
+     height: fit-content;
+   }
+
+   .scrolldown>* {
+     white-space: nowrap;
+   }
+
+   .countUp-box {
+     height: fit-content;
+     display: flex;
+     align-items: center;
+
+     .minus-brackets {
+       line-height: 1;
+       letter-spacing: 0;
+     }
+   }
+
+   .count-number {
+     height: fit-content;
+     display: flex;
+     align-items: center;
+   }
+
+   .count-up {
+     display: flex;
+     justify-content: space-between;
+   }
+
+   .number-animate {
+     overflow: hidden;
+     display: inline-flex;
+     position: relative;
+     transform: all .2s;
+     justify-content: space-between;
+   }
+
+   .number-animate .number-animate-dot {
+     float: left;
+     text-align: center;
+   }
+
+   .number-animate .number-animate-dom {
+     height: fit-content;
+     text-align: center;
+     float: left;
+     position: relative;
+     top: 0;
+     transform: translateY(0);
+     transition: all .2s;
+   }
+
+   .number-animate .number-animate-dom span,
+   .number-animate .number-animate-dot span {
+     float: left;
+     line-height: 1;
+
+     i {
+       font-style: inherit;
+       display: block;
+     }
+   }
+
+   .number-animate .number-animate-span {
+     display: inline-block;
+     background-size: 100% 100%;
+     background-repeat: no-repeat;
+     background-position: center center;
+     line-height: 1;
+   }
+
+   .number-animate .number-animate-dot {
+     display: inline-block;
+     background-size: cover;
+     background-repeat: no-repeat;
+     background-position: center center;
+   }
+
+   .suffix,
+   .prefix {
+     line-height: 1;
+     position: relative;
+   }
+
+
+   .refresh_loading {
+     font-size: 16px;
+     font-weight: 400;
+     color: #1890ff;
+     width: 100%;
+     height: 100%;
+     display: flex;
+     padding: 10px 0;
+
+     .Spin {
+       margin: 0 6px;
+     }
+   }
+
+   .count-item i {
+     font-style: inherit;
+     display: block;
+   }
+
+   .symbol-type {
+     line-height: 0;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     letter-spacing: 0;
+     z-index: 9;
+   }
+ }

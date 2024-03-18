@@ -1,0 +1,193 @@
+.lcz-china-map-wrapper {
+  width: 100%;
+  height: 100%;
+  position: relative;
+
+  &.moved {
+    cursor: grab;
+
+    path {
+      cursor: grab !important;
+    }
+  }
+
+  &.design {
+    pointer-events: none;
+
+    .indicator-wrapper li,
+    .lcz-china-2dmap-sandian-group>*,
+    .lcz-china-map-tip {
+      pointer-events: none !important;
+    }
+  }
+
+  .lcz-china-map-container,
+  .lcz-china-map-transform-box {
+    width: 100%;
+    height: 100%;
+    position: relative;
+  }
+
+  .lcz-china-map-transform-box {
+    transform: rotateX(var(--rotate-x)) rotateY(var(--rotate-y)) rotateZ(var(--rotate-z));
+    transform-style: preserve-3d;
+    --area-scale: 1;
+    --area-translate-x: 0;
+    --area-translate-y: 0;
+  }
+
+  .lcz-china-map-container {
+    transform: rotateZ(calc(var(--rotate-z) * -1)) rotateY(calc(var(--rotate-y) * -1)) rotateX(calc(var(--rotate-x) * -1)) scale(var(--area-scale)) translate(var(--area-translate-x), var(--area-translate-y)) rotateX(var(--rotate-x)) rotateY(var(--rotate-y)) rotateZ(var(--rotate-z));
+    transform-style: preserve-3d;
+  }
+
+  .lcz-china-map,
+  .lcz-china-map-area-name:not(.multistage),
+  .lcz-china-map-area-name.multistage,
+  .lcz-china-map-tip-wrapper,
+  .lcz-china-map-area,
+  .lcz-china2d-map-sandian-wrap {
+    transform: scale(calc(1 / var(--area-scale))) rotateZ(calc(var(--rotate-z) * -1)) rotateY(calc(var(--rotate-y) * -1)) rotateX(calc(var(--rotate-x) * -1)) rotateX(var(--rotate-x)) rotateY(var(--rotate-y)) rotateZ(var(--rotate-z)) scale(var(--area-scale));
+    transform-style: preserve-3d;
+  }
+
+  ul {
+    margin: 0;
+    padding: 0;
+  }
+
+  .lcz-china-map {
+    z-index: 99;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+
+    >svg,
+    >div {
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+
+
+    .lcz-china-map-area-name {
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      user-select: none;
+      white-space: nowrap;
+
+      span {
+        position: absolute;
+        transform: translate3d(-50%, -50%, 0px) scale(calc(1 / var(--area-scale)));
+      }
+    }
+
+    .lcz-china-map-area-name.reversion span,
+    .lcz-china-map-tip-wrapper.reversion .lcz-china-map-area.reversion .tip-area-name {
+      transform-origin: var(--transform-origin);
+      transform: translate3d(-50%, -50%, 0) rotateZ(calc(var(--rotate-z) * -1)) rotateY(calc(var(--rotate-y) * -1)) rotateX(calc(var(--rotate-x) * -1)) scale(calc(1 / var(--area-scale)));
+      pointer-events: none;
+    }
+
+    .lcz-china-map-tip.no-fixed.reversion {
+      transform-origin: var(--transform-origin);
+      transform: rotateZ(calc(var(--rotate-z) * -1)) rotateY(calc(var(--rotate-y) * -1)) rotateX(calc(var(--rotate-x) * -1));
+    }
+
+    .lcz-china2d-map-tenline-qundao {
+      pointer-events: none;
+    }
+
+
+    .indicator-wrapper {
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+
+      >ul {
+        position: absolute;
+        display: flex;
+        user-select: none;
+
+        li {
+          display: flex;
+          align-items: center;
+          pointer-events: auto;
+          cursor: pointer;
+          line-height: 1;
+
+          span {
+            opacity: 0.6;
+          }
+
+          &.selected {
+
+            span {
+              opacity: 1;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .lcz-side-wrapper {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    pointer-events: none;
+  }
+
+  .lcz-upper-drill-wrapper {
+    position: absolute;
+    z-index: 100;
+    cursor: pointer;
+    background-size: 100% 100% !important;
+    background-repeat: no-repeat !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
+  }
+
+
+  .lcz-china-map-tip {
+    position: absolute;
+    background-size: 100% 100% !important;
+    pointer-events: none;
+
+    >ul {
+      position: relative;
+      margin: 0;
+      left: 0;
+      top: 0;
+      padding: 0;
+      list-style: none;
+
+      li {
+        position: absolute;
+        display: flex;
+        line-height: 1.5;
+
+        >span {
+          display: inline-block;
+        }
+
+        .lcz-tip-value {
+          .lcz-tip-suffix {
+            display: inline-block;
+          }
+        }
+
+        &::-webkit-scrollbar {
+          display: none;
+        }
+      }
+    }
+  }
+}

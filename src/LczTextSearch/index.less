@@ -1,0 +1,70 @@
+.lcz-search-wrapper {
+  height: 100%;
+  width: 100%;
+
+  .lcz-search-input {
+    height: 100%;
+    overflow: initial;
+    transition: all .3s;
+
+    .ant-input-suffix {
+      display: none;
+    }
+
+    &:hover {
+      .ant-input-suffix {
+        display: flex;
+      }
+    }
+
+    &.close {
+      .ant-input-suffix {
+        display: none;
+      }
+    }
+  }
+
+  .ant-input-affix-wrapper {
+    color: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    font-family: inherit;
+    letter-spacing: inherit;
+    height: 100%;
+
+    input.ant-input {
+      color: inherit;
+      font-size: inherit;
+      font-weight: inherit;
+      font-family: inherit;
+      letter-spacing: inherit;
+      background-color: transparent;
+    }
+  }
+
+  .lcz-search-ul {
+    position: relative;
+
+    .search-ul {
+      position: absolute;
+      width: 100%;
+      transition: all .3s;
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+
+      .search-li {
+        p {
+          margin: 0;
+          cursor: default;
+          max-width: 100%;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+        }
+      }
+
+
+    }
+  }
+}

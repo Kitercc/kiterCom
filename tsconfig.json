@@ -1,0 +1,19 @@
+{
+    "compilerOptions": {
+      "moduleResolution": "Node",
+      "target": "es6",
+      "module":"esnext",
+      "declaration": true,
+      "outDir": "es",
+      "noImplicitAny": false,
+      "declarationDir": "types",
+      "skipLibCheck": true,
+      "lib": ["es2015", "es2016", "es2017", "dom", "esnext"],
+      "strict": true,
+      "allowSyntheticDefaultImports": true,
+      "jsx": "react"
+    },
+    "include": [
+      "src"
+    ]
+}

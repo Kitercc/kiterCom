@@ -1,0 +1,47 @@
+.multiline-text {
+  .multiline-wrapper {
+    overflow-y: auto;
+    cursor: pointer;
+  }
+
+  /* 设置滚动条的样式 */
+  ::-webkit-scrollbar {
+    width: 0px;
+  }
+
+  .animate {
+    transition: all 0.06s linear;
+  }
+
+  .container {
+    position: relative;
+    top: 0;
+    left: 0;
+
+    p {
+      margin: 0;
+    }
+  }
+}
+
+.scrollBar {
+
+  /* 设置滚动条的样式 */
+  ::-webkit-scrollbar {
+    display: true !important;
+    width: 4px !important;
+  }
+
+  /* 滚动槽 */
+  ::-webkit-scrollbar-track {
+    border-radius: 2px;
+  }
+
+  /* 滚动条滑块 */
+  ::-webkit-scrollbar-thumb {
+    border-radius: 2px;
+    background: #62686F;
+    width: 4px;
+  }
+
+}

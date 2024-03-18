@@ -1,0 +1,24 @@
+.lcz-carousel-video-stream {
+
+  .swiper-container {
+    &.disable {
+      * {
+        pointer-events: none !important;
+      }
+    }
+  }
+
+
+  .swiper-container-cube {
+    .swiper-wrapper {
+      .swiper-slide {
+        opacity: 1;
+        transition: opacity 0.3s;
+      }
+
+      .swiper-slide:not(.swiper-slide-active) {
+        opacity: 0;
+      }
+    }
+  }
+}

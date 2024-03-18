@@ -1,0 +1,43 @@
+.lcz-horizontal-menu {
+  width: 100%;
+  height: 100%;
+
+  ul {
+    margin: 0;
+    padding: 0;
+  }
+
+  .lcz-horizontal-menu-list {
+    display: flex;
+    width: max-content;
+    user-select: none;
+    align-items: center;
+
+    .lcz-menu-nav-item {
+      position: relative;
+      cursor: pointer;
+      line-height: 1.2;
+      transition: all .2s ease-in-out;
+      height: max-content;
+      width: max-content;
+    }
+  }
+
+  .lcz-menu-submenu-wrapper {
+    position: absolute;
+    white-space: nowrap;
+
+    .lcz-menu-submenu-list {
+      display: flex;
+      flex-direction: column;
+      // overflow: hidden;
+
+      .lcz-menu-submenu-item {
+        display: flex;
+        overflow: hidden;
+        transition: all .2s ease-in-out;
+        flex-shrink: 0;
+      }
+    }
+  }
+}

@@ -1,0 +1,109 @@
+/** 公用样式或重载样式 */
+.lcz-com-con {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+
+  ul {
+    list-style: none;
+  }
+
+  .gradient {
+    z-index: 9;
+    -webkit-background-clip: text !important;
+    background-clip: text !important;
+    -webkit-text-fill-color: transparent;
+    text-fill-color: transparent;
+    text-decoration: none;
+    background-size: 100% 100%;
+
+    &::selection {
+      -webkit-text-fill-color: #fff;
+      text-fill-color: #fff;
+    }
+  }
+
+  .lcz-chart-tooltip-wrapper {
+    display: flex;
+    flex-direction: column;
+
+    .lcz-chart-tooltip {
+
+      display: flex;
+      flex-direction: column;
+
+      .lcz-chart-tooltip-item {
+        display: flex;
+        align-items: center;
+        height: auto;
+
+        .lcz-tooltip-mark,
+        .lcz-tooltip-name,
+        .lcz-tooltip-value,
+        .lcz-tooltip-suffix {
+          height: 100%;
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+        }
+
+        .lcz-tooltip-value {
+          margin-left: 12px;
+        }
+      }
+    }
+  }
+}
+
+.background-image-100 {
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+
+//提示信息
+.lcz-notice {
+  .ant-message-notice-content {
+    background-color: rgba(32, 37, 43, 1);
+    box-shadow: 0px 2px 12px 0px rgba(0, 0, 0, 0.5);
+    color: #FFFFFF;
+    font-size: 14px;
+  }
+}
+
+.antd-tooltip-no-arrow {
+  .ant-tooltip-arrow {
+    display: none;
+  }
+
+  &.ant-tooltip-placement-top .ant-tooltip-inner {
+    transform: translateY(6px);
+  }
+
+  &.ant-tooltip-placement-bottom .ant-tooltip-inner {
+    transform: translateY(-6px);
+  }
+}
+
+.hide-scroll-bar {
+  -ms-overflow-style: none; //IE 10+
+  scrollbar-width: none; //火狐隐藏滚动条
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  &::-webkit-scrollbar-corner {
+    display: none;
+  }
+}
+
+.text-nowrap {
+  white-space: nowrap;
+}
+
+.lcz-com-dark-message {
+  .ant-message-notice-content {
+    background-color: #20252b;
+    color: #fff;
+  }
+}

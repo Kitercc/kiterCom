@@ -1,0 +1,56 @@
+#lcz-border-radiu-right-icon {
+  >* {
+    transition: all .3s;
+  }
+
+  .lcz-border-box {
+    width: 100%;
+    height: 100%;
+    padding: 4px;
+    position: relative;
+
+    &::before {
+      content: '';
+      display: inline-block;
+      width: 98%;
+      height: 1px;
+      background-color: #0a3d7f;
+      position: absolute;
+      top: 45px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .icon {
+      position: absolute;
+      top: 16px;
+      right: 20px;
+      line-height: 1;
+
+      ul {
+        list-style: none;
+        display: flex;
+
+        li {
+          width: 8px;
+          height: 14px;
+          background-color: #44CAFF;
+          margin-left: 4px;
+          transform: skew(-30deg);
+
+          &:nth-child(2) {
+            opacity: .7;
+          }
+
+          &:nth-child(3) {
+            opacity: .5;
+          }
+
+          &:nth-child(4) {
+            opacity: .3;
+          }
+        }
+      }
+    }
+  }
+}

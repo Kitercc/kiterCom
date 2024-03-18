@@ -1,0 +1,68 @@
+#Lcz-border-rectangle {
+  padding: 3px;
+
+  >* {
+    transition: all .3s;
+  }
+
+  .border-rectangle-box {
+    width: 100%;
+    height: 100%;
+    position: relative;
+
+    &::before,
+    &::after {
+      position: absolute;
+      content: '';
+      display: inline-block;
+      width: 22px;
+      height: 22px;
+      border: 2px solid #14B5FC;
+    }
+
+    &::before {
+      top: -3px;
+      left: -3px;
+      border-bottom: 0;
+      border-right: 0;
+    }
+
+    &::after {
+      bottom: -3px;
+      left: -3px;
+      border-right: 0;
+      border-top: 0;
+    }
+
+    >span {
+      display: block;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+
+      &::before,
+      &::after {
+        position: absolute;
+        content: '';
+        display: inline-block;
+        width: 22px;
+        height: 22px;
+        border: 2px solid #14B5FC;
+      }
+
+      &::before {
+        top: -3px;
+        right: -3px;
+        border-bottom: 0;
+        border-left: 0;
+      }
+
+      &::after {
+        bottom: -3px;
+        right: -3px;
+        border-left: 0;
+        border-top: 0;
+      }
+    }
+  }
+}

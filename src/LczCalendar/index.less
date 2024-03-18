@@ -1,0 +1,42 @@
+.calendar-wrapper {
+    .ant-picker-calendar {
+        height: 100%;
+        width: 100%;
+        overflow: hidden;
+    }
+
+    thead {
+        th {
+            text-align: right;
+        }
+    }
+
+    .ant-picker-content {
+        tbody {
+            .ant-picker-cell {
+                &::before {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    .calendar-grid {
+        display: flex;
+        flex-direction: column;
+
+        >ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+
+            li {
+                display: flex;
+                flex-direction: row;
+                align-items: flex-start;
+
+            }
+        }
+
+    }
+}

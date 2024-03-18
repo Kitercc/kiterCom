@@ -1,0 +1,31 @@
+.lcz-normal-title {
+  white-space: nowrap;
+  width: 100%;
+  height: 100%;
+  display: flex;
+
+  .lcz-normal-content {
+    position: relative;
+    display: flex;
+  }
+
+  span {
+    line-height: 1.2;
+    z-index: 9;
+    display: block;
+    max-width: 100%;
+    max-height: 100%;
+
+    &::selection {
+      text-shadow: none;
+    }
+  }
+
+  .gradient {
+    line-height: 1.4;
+  }
+
+  .shadow-title {
+    position: absolute;
+  }
+}

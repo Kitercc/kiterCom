@@ -1,0 +1,99 @@
+.lcz-point-timeline-wrapper {
+  width: 100%;
+  height: 100%;
+  position: relative;
+
+  .lcz-point-timeline-content {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    overflow: hidden;
+
+    ul.level,
+    ul.vertical {
+      margin: 0;
+      padding: 0;
+      position: absolute;
+      display: flex;
+    }
+
+    ul.level {
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      flex-direction: row;
+    }
+
+    ul.vertical {
+      left: 50%;
+      top: 0;
+      transform: translateX(-50%);
+      flex-direction: column;
+    }
+  }
+
+
+  ul.content {
+    padding: 0;
+    margin: 0;
+  }
+
+  .timeline-item {
+    position: relative;
+
+    .label,
+    .point,
+    .content {
+      cursor: pointer;
+      position: absolute;
+      left: 50%;
+      transition: color 0.3s, background 0.3s;
+      word-wrap: break-word;
+    }
+
+    .point {
+      background-size: 100% 100%;
+      top: 50%;
+    }
+
+    .label,
+    .content {
+      height: fit-content;
+      z-index: 99;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .content {
+      pointer-events: none;
+      display: flex;
+      flex-direction: column;
+
+      ul {
+        list-style-type: initial;
+      }
+    }
+  }
+
+  .arrow-box {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    pointer-events: none;
+    font-size: 0;
+
+    .arrow-btn {
+      position: absolute;
+      pointer-events: auto;
+      cursor: pointer;
+
+      &.disabled {
+        cursor: default;
+      }
+    }
+  }
+}
+
+.design-lcz-com-wrap .lcz-point-timeline-wrapper .arrow-box .arrow-btn {
+  pointer-events: none;
+}

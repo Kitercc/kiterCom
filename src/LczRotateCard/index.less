@@ -1,0 +1,129 @@
+.lcz-rotate-card-wrapper {
+  position: relative;
+
+  &:hover {
+    .lcz-rotate-card-arrow-hover {
+      display: block;
+    }
+  }
+
+  .lcz-rotate-card-container {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+
+
+    .lcz-rotate-card-items {
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      user-select: none;
+      // visibility: visible;
+
+      .lcz-rotate-card-wrapper {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+
+
+        .card-image {
+          position: absolute;
+          pointer-events: auto;
+          overflow: hidden;
+          cursor: pointer;
+
+          .ant-image-mask {
+            display: none !important;
+          }
+        }
+
+        .card-icon {
+          position: absolute;
+          pointer-events: auto;
+          overflow: hidden;
+          cursor: pointer;
+          text-align: center;
+          line-height: 1;
+
+          .ant-image-mask {
+            display: none !important;
+          }
+        }
+
+        .lcz-rotate-card-items-ul {
+          position: relative;
+          margin: 0;
+          left: 0;
+          top: 0;
+          padding: 0;
+          list-style: none;
+          z-index: 9;
+          pointer-events: none;
+
+          li {
+            position: absolute;
+            display: flex;
+            line-height: 1.5;
+
+            >span {
+              display: inline-block;
+            }
+
+            .lcz-tip-value {
+              .lcz-tip-suffix {
+                display: inline-block;
+              }
+            }
+
+            &::-webkit-scrollbar {
+              display: none;
+              width: 6px;
+              height: 6px;
+              background-color: transparent;
+            }
+          }
+
+        }
+
+
+      }
+
+
+      &.hidden {
+        pointer-events: none;
+      }
+    }
+  }
+
+  .lcz-rotate-card-pre,
+  .lcz-rotate-card-next {
+    position: absolute;
+    top: 50%;
+    cursor: pointer;
+    z-index: 10;
+
+    >div {
+      display: none;
+      transition: all 0.3s;
+    }
+
+    .lcz-rotate-card-arrow-all {
+      display: block;
+    }
+
+
+
+  }
+}

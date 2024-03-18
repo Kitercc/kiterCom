@@ -1,0 +1,61 @@
+.lcz-com-con {
+  .lcz-iframe-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+
+    &:hover {
+      span.close {
+        display: block;
+      }
+    }
+
+    span.close {
+      position: absolute;
+      right: 0;
+      top: 0;
+      color: #fff;
+      width: 20px;
+      font-size: 12px;
+      cursor: pointer;
+      height: 20px;
+      line-height: 20px;
+      text-align: center;
+      background: rgba(0, 0, 0, 0.5);
+      display: none;
+      z-index: 2;
+    }
+
+
+    iframe {
+      width: 100%;
+      height: 100%;
+
+      #app {
+        display: none;
+      }
+
+
+      /* 设置滚动条的样式 */
+      ::-webkit-scrollbar {
+        display: none !important;
+        width: 4px !important;
+      }
+
+      /* 滚动槽 */
+      ::-webkit-scrollbar-track {
+        border-radius: 2px;
+      }
+
+      /* 滚动条滑块 */
+      ::-webkit-scrollbar-thumb {
+        border-radius: 2px;
+        background: #62686F;
+        width: 4px;
+      }
+
+    }
+
+
+  }
+}

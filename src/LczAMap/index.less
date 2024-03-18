@@ -1,0 +1,58 @@
+.lcz-amap-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+
+  ul {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+  }
+
+  &.design {
+    .amap-marker {
+
+      div[class^="point-"],
+      div[class^="center-point-"],
+      div[class^="amap-tip-"],
+      ul[class^="amap-tooltip-"] {
+        pointer-events: none;
+        cursor: default;
+      }
+    }
+
+    .lcz-amap-cluster-marker {
+      pointer-events: none;
+      cursor: default;
+
+    }
+  }
+
+  .amap-logo img,
+  .amap-copyright {
+    display: none !important;
+  }
+
+
+  .amap-marker {
+    pointer-events: none !important;
+  }
+
+  .lcz-amap-cluster-marker {
+    pointer-events: auto;
+    cursor: pointer;
+    display: flex;
+    line-height: 1;
+    justify-content: center;
+    align-items: center;
+    background-size: 100% 100%;
+    position: relative;
+
+    .iconfont {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+}

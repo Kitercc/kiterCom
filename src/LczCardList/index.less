@@ -1,0 +1,146 @@
+.lcz-card-list {
+  position: relative;
+  word-break: break-all;
+
+  ul {
+    margin: 0;
+    padding: 0;
+  }
+
+  .card-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    position: relative;
+
+    &::-webkit-scrollbar {
+      display: block;
+      width: 0px;
+      height: 4px;
+      background-color: transparent;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: rgba(255, 255, 255, .1);
+      border-radius: 0px;
+    }
+
+    .card-container-ul-box {
+      display: flex;
+      position: absolute;
+    }
+
+    .lcz-card-list-ul {
+      display: flex;
+      justify-content: center;
+
+      .lcz-card-list-li {
+        overflow: hidden;
+        position: relative;
+        cursor: pointer;
+        background-size: 100% 100%;
+
+        .lcz-card-container-item {
+          position: absolute;
+          display: flex;
+          line-height: 1;
+          height: 100%;
+          overflow: hidden;
+          pointer-events: none;
+
+          .card-field {
+            display: flex;
+            flex-shrink: 0;
+            height: max-content;
+            width: max-content;
+
+            .image-field {
+              flex-shrink: 0;
+            }
+
+            .proportions-chart-string {
+              white-space: nowrap;
+            }
+
+            .chart-field {
+              pointer-events: none;
+            }
+          }
+
+          .number-field-con {
+            display: flex;
+            align-items: center;
+            white-space: nowrap;
+
+            i {
+              font-style: normal;
+            }
+          }
+
+          .tags-field-con {
+            display: flex;
+            align-items: center;
+
+            li {
+              white-space: nowrap;
+              height: max-content;
+            }
+          }
+
+          .progress-field-con {
+            display: flex;
+            align-items: center;
+            white-space: nowrap;
+            gap: 4px;
+
+            .progress-grid {
+              display: flex;
+              overflow: hidden;
+
+              li {
+                height: 100%;
+                flex-shrink: 0;
+                overflow: hidden;
+              }
+
+              li span {
+                display: inline-block;
+                height: 100%;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .pager-wrapper {
+    position: absolute;
+    display: flex;
+    z-index: 9;
+
+    li {
+      cursor: pointer;
+    }
+  }
+
+
+  .lcz-card-list-prev {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 9;
+    cursor: pointer;
+  }
+
+  .lcz-card-list-next {
+    position: absolute;
+    right: 0;
+    top: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 9;
+    cursor: pointer;
+  }
+}
